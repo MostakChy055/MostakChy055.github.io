@@ -1,0 +1,26 @@
+{
+  "id": "arabic-intent",
+  "kind": "paper",
+  "title": "Fired_from_NLP at AraFinNLP 2024: Dual-Phase-BERT - A Fine-Tuned Transformer-Based Model for Multi-Dialect Intent Detection in The Financial Domain for The Arabic Language",
+  "shortTitle": "Understanding intent across dialects.",
+  "year": 2024,
+  "venue": "AraFinNLP 2024 · ArabicNLP · ACL",
+  "authors": ["Md. Sajid Alam Chowdhury", "Mostak Mahmud Chowdhury", "Anik Mahmud Shanto", "Hasan Murad", "Udoy Das"],
+  "tags": ["NLP", "Multilingual learning"],
+  "summary": "A dialect-aware, two-stage approach to classifying Arabic banking requests across 77 intents.",
+  "sourceUrl": "https://aclanthology.org/2024.arabicnlp-1.36/",
+  "pdfUrl": "https://aclanthology.org/2024.arabicnlp-1.36.pdf",
+  "codeUrl": "https://github.com/Fired-from-NLP/ArabicNLP2024-subtask1",
+  "metrics": [{ "label": "Reported test micro-F1", "value": "0.801" }, { "label": "Shared-task ranking", "value": "7th" }, { "label": "Banking intents", "value": "77" }],
+  "pipeline": ["Arabic query", "Dialect classifier", "Dialect-specific AraBERT", "Banking intent"],
+  "sections": [
+    { "id": "concept", "title": "Start with the idea", "paragraphs": ["Intent detection asks what someone is trying to do. Two customers might use different vocabulary for the same request, while two nearly identical messages can require different actions. Dialect adds another layer of variation between wording and intent."] },
+    { "id": "question", "title": "The research question", "paragraphs": ["The work classifies Arabic banking queries into 77 ArBanking77 intents using a dialect-aware hierarchy."] },
+    { "id": "method", "title": "Approach & techniques", "paragraphs": ["Dual-Phase-BERT uses three fine-tuned AraBERT models: a router distinguishes Modern Standard Arabic from Palestinian Arabic, then sends the query to the corresponding intent classifier. Conventional classifiers, recurrent networks, and a single AraBERT provide baselines."] },
+    { "id": "findings", "title": "Findings & evidence", "paragraphs": ["The reported test micro-F1 is 0.801, earning 7th place; the single AraBERT baseline scores 0.767. Development F1 is 0.984. The paper attributes the development-to-test drop partly to additional dialects appearing at test time."] },
+    { "id": "limitations", "title": "What remains difficult", "paragraphs": ["Training covers MSA and Palestinian Arabic, while testing also includes Levantine, North African, and Gulf dialects. The paper also identifies class imbalance.", "Discussion: a hard router can propagate its own mistakes. An unfamiliar dialect must still enter one of two branches. A useful diagnostic would report routing errors separately from downstream intent errors, including confidence on unfamiliar inputs."] },
+    { "id": "discussion", "title": "Research directions & discussion", "paragraphs": ["LoRA offers a way to adapt pretrained weights through trainable low-rank updates. A proposed follow-up could compare a shared multilingual backbone with small dialect adapters against the original hard-routing design.", "Evaluate held-out dialects, calibration, and per-intent recall alongside aggregate F1. The important question is whether specialization survives distribution shift, not simply whether it fits familiar dialects well."], "links": [{ "label": "Related reading: LoRA", "url": "https://arxiv.org/abs/2106.09685" }] }
+  ],
+  "discussionPrompts": ["Should uncertain dialect predictions route softly to multiple experts?", "How would a shared encoder compare with separate dialect models under equal compute?", "What should an intent system do when a request falls outside all 77 classes?"],
+  "citation": "Md. Sajid Alam Chowdhury, Mostak Mahmud Chowdhury, Anik Mahmud Shanto, Hasan Murad, and Udoy Das. 2024. Fired_from_NLP at AraFinNLP 2024: Dual-Phase-BERT - A Fine-Tuned Transformer-Based Model for Multi-Dialect Intent Detection in The Financial Domain for The Arabic Language. Proceedings of the Second Arabic Natural Language Processing Conference, pp. 410–414. Association for Computational Linguistics. doi:10.18653/v1/2024.arabicnlp-1.36."
+}

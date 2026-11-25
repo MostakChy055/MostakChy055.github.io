@@ -1,0 +1,27 @@
+{
+  "id": "video-colorization",
+  "kind": "thesis",
+  "title": "Deep Learning Video Colorization with Temporal Consistency",
+  "shortTitle": "Color that stays with the story.",
+  "year": 2025,
+  "venue": "Undergraduate thesis · CUET",
+  "authors": ["Mostak Mahmud Chowdhury"],
+  "tags": ["Computer vision", "Video", "Generative AI"],
+  "summary": "Exploring plausible color in grayscale video while keeping object boundaries coherent and colors stable as scenes move.",
+  "sourceUrl": "",
+  "pdfUrl": "",
+  "codeUrl": "",
+  "sourceNote": "This research overview is based on the academic CV. The thesis manuscript, implemented architecture, dataset, and quantitative results have not yet been supplied. Conceptual explanations and proposed extensions below are not claims about completed experiments.",
+  "metrics": [],
+  "pipeline": ["Grayscale frames", "Plausible color", "Spatial coherence", "Temporal consistency"],
+  "sections": [
+    { "id": "concept", "title": "Start with the idea", "paragraphs": ["A grayscale frame preserves brightness while discarding much of the information needed to recover color. Several colors can explain the same gray value. Colorization therefore involves predicting a plausible appearance, rather than simply reversing a known transformation.", "Video adds a second challenge: a shirt should keep a coherent color as its wearer moves. Individually convincing frames can still produce distracting flicker when played in sequence. Spatial quality and temporal stability have to be considered together."] },
+    { "id": "question", "title": "The research question", "paragraphs": ["How can a deep learning system produce plausible colors, respect object boundaries, and preserve visual continuity across moving frames? This is the central focus documented for my undergraduate thesis at CUET."] },
+    { "id": "method", "title": "Approach & techniques", "paragraphs": ["The CV identifies encoder–decoder representations, probabilistic color modeling, motion-aware consistency, and adversarial learning as research directions. It does not specify which components were implemented or evaluated.", "Conceptually, an encoder–decoder can connect scene context to dense color predictions. Probabilistic modeling can represent ambiguity instead of averaging several plausible colors into a dull compromise. Motion-aware constraints can relate the same object across frames. These explanations describe the design space, not a verified thesis architecture."] },
+    { "id": "findings", "title": "Findings & evidence", "paragraphs": ["The documented contribution is a research focus on spatially and temporally consistent video colorization. Numerical results and comparative performance are not available in the supplied CV. A manuscript-backed account should add the data split, architecture, training objectives, baselines, and both image-quality and temporal evaluations."] },
+    { "id": "limitations", "title": "What remains difficult", "paragraphs": ["A temporal penalty can suppress flicker but also preserve an incorrect color. Motion estimates become unreliable at occlusions, fast movement, and scene cuts. A model needs to distinguish a genuine appearance change from an unstable prediction.", "Evaluation should separate plausible alternative colors from artifacts. A pixelwise comparison with a single reference can penalize a visually reasonable answer. Temporal consistency, object-boundary quality, and human preference answer different questions."] },
+    { "id": "discussion", "title": "Research directions & discussion", "paragraphs": ["A useful next experiment would compare framewise predictions with motion-aware propagation under identical data and compute. Report temporal artifacts alongside color quality, and examine scene cuts separately.", "T2I-Adapter demonstrates lightweight conditioning for diffusion models. That offers a related direction for controllable appearance, but image conditioning alone does not establish video consistency. A video adaptation would need separate temporal evaluation."], "links": [{ "label": "Related reading: T2I-Adapter (2023)", "url": "https://arxiv.org/abs/2302.08453" }] }
+  ],
+  "discussionPrompts": ["When should a model prefer temporal stability over a more plausible color in one frame?", "Which evaluation best catches color drift through an occlusion?", "How would you design an ablation that separates motion propagation from generative quality?"],
+  "citation": "Mostak Mahmud Chowdhury. 2025. Deep Learning Video Colorization with Temporal Consistency. Undergraduate thesis, Chittagong University of Engineering and Technology. Title and scope from the academic CV."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "toolkit",
+  "groups": [
+    { "title": "Languages", "items": ["Python", "Java", "TypeScript", "JavaScript", "Kotlin", "C++", "C", "PHP"] },
+    { "title": "Software & data", "items": ["Spring Boot", "FastAPI", "REST APIs", "Vue.js", "PostgreSQL", "MySQL", "Flyway", "Node.js", "Odoo", "Firebase"] },
+    { "title": "AI & machine learning", "items": ["PyTorch", "TensorFlow", "Keras", "Transformer-based NLP", "CLIP", "YOLO", "FAISS", "BM25", "FFmpeg"] },
+    { "title": "Systems & tools", "items": ["Docker", "Kubernetes", "Azure", "Git / GitHub", "Datadog", "Bash"] }
+  ],
+  "directions": [
+    { "title": "Multimodal AI", "description": "CLIP/SigLIP-style vision–language representations, multimodal fusion, instruction-tuned vision–language models, hard-negative sampling, and LoRA/QLoRA adaptation." },
+    { "title": "NLP & retrieval", "description": "Multilingual embeddings, bi-encoder retrieval and cross-encoder reranking, contrastive fine-tuning, retrieval-augmented generation, calibration, and error analysis under imbalance or domain shift." },
+    { "title": "Video & generative vision", "description": "Optical-flow and feature-propagation temporal constraints, perceptual and flicker-aware evaluation, video transformers, and latent-diffusion approaches to controllable colorization." }
+  ]
+}

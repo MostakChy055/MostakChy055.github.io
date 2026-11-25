@@ -1,0 +1,26 @@
+{
+  "id": "semantic-relatedness",
+  "kind": "paper",
+  "title": "Fired_from_NLP at SemEval-2024 Task 1: Towards Developing Semantic Textual Relatedness Predictor - A Transformer-based Approach",
+  "shortTitle": "Related meaning, different words.",
+  "year": 2024,
+  "venue": "SemEval 2024 · ACL",
+  "authors": ["Anik Mahmud Shanto", "Md. Sajid Alam Chowdhury", "Mostak Mahmud Chowdhury", "Udoy Das", "Hasan Murad"],
+  "tags": ["NLP", "Representation learning"],
+  "summary": "Learning the degree of connection between English sentence pairs with STS-BERT.",
+  "sourceUrl": "https://aclanthology.org/2024.semeval-1.123/",
+  "pdfUrl": "https://aclanthology.org/2024.semeval-1.123.pdf",
+  "codeUrl": "https://github.com/Fired-from-NLP/SemEval-2024-task-1-track-A-eng",
+  "metrics": [{ "label": "Spearman correlation", "value": "0.81033" }, { "label": "Track A3 ranking", "value": "25th" }],
+  "pipeline": ["Sentence pair", "BERT + mean pooling", "Cosine similarity", "Relatedness score"],
+  "sections": [
+    { "id": "concept", "title": "Start with the idea", "paragraphs": ["Two sentences can be related without saying the same thing. A question about rainfall and a description of flooding share a topic and a causal connection, even though neither paraphrases the other. A useful representation needs to capture more than overlapping words."] },
+    { "id": "question", "title": "The research question", "paragraphs": ["The paper studies continuous semantic relatedness for English sentence pairs in SemEval-2024 Task 1, Track A3."] },
+    { "id": "method", "title": "Approach & techniques", "paragraphs": ["STS-BERT encodes both sentences with bert-base-uncased, uses pooled representations and cosine similarity, and trains with mean squared error. The experiments combine shared-task data with STS-B and earlier SemEval datasets. Comparisons include RoBERTa, LSTM/BiLSTM, and conventional regressors."] },
+    { "id": "findings", "title": "Findings & evidence", "paragraphs": ["The reported test Spearman correlation is 0.81033, placing 25th. Table 4 reports 0.749 for RoBERTa and 0.4990 for the strongest listed BiLSTM baseline. Spearman evaluates ordering agreement, not the absolute accuracy of every predicted score."] },
+    { "id": "limitations", "title": "What remains difficult", "paragraphs": ["The authors discuss mixed dataset score scales and errors on sentence transformations. Discussion: multiplying then dividing labels does not by itself establish meaningful precision loss; a controlled ablation would be needed to support that explanation.", "A reproduction should verify pair deduplication before splitting and inspect scale normalization. For practical retrieval, it should also evaluate whether highly ranked results actually answer the user’s question."] },
+    { "id": "discussion", "title": "Research directions & discussion", "paragraphs": ["Modern retrieval designs can separate inexpensive candidate retrieval from more expensive pairwise reranking. M3-Embedding provides a useful related example of multilingual representations supporting several retrieval modes.", "A proposed experiment would compare contrastive fine-tuning with the regression objective, using hard negatives that share vocabulary but express different meanings. This tests an alternative training signal; it is not a reported result of the original paper."], "links": [{ "label": "Related reading: M3-Embedding", "url": "https://arxiv.org/abs/2402.03216" }] }
+  ],
+  "discussionPrompts": ["How should a model treat related sentences that contradict one another?", "Would a retrieval metric expose errors that Spearman correlation misses?", "Which hard negatives best distinguish topical overlap from useful relevance?"],
+  "citation": "Anik Mahmud Shanto, Md. Sajid Alam Chowdhury, Mostak Mahmud Chowdhury, Udoy Das, and Hasan Murad. 2024. Fired_from_NLP at SemEval-2024 Task 1: Towards Developing Semantic Textual Relatedness Predictor - A Transformer-based Approach. Proceedings of the 18th International Workshop on Semantic Evaluation, pp. 859–864. Association for Computational Linguistics. doi:10.18653/v1/2024.semeval-1.123."
+}

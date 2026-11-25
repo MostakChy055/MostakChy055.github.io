@@ -1,0 +1,19 @@
+{
+  "id": "projects",
+  "items": [
+    {
+      "title": "Agentic Video Studio",
+      "category": "Applied AI · Video systems",
+      "description": "A prompt-guided video-production prototype combining semantic retrieval, planning, timestamped segment selection, and automated rendering to turn personal media into social-ready edits.",
+      "detail": "Hybrid BM25–FAISS retrieval and a responsive thumbnail-first media experience, with optimized analysis, caching, and independent pipeline stages to reduce repeat processing and improve compute utilization.",
+      "technologies": ["Python", "FastAPI", "Kotlin / Jetpack Compose", "PyTorch", "PostgreSQL", "FAISS", "BM25", "FFmpeg", "Docker"]
+    },
+    {
+      "title": "LLM TokenWatch",
+      "category": "Developer tooling · Observability",
+      "description": "An internal observability tool for understanding model usage and projected demand.",
+      "detail": "Event-driven incremental monitoring, per-model token aggregation, restart recovery, and role-specific dashboards for usage trends.",
+      "technologies": ["Node.js", "Chokidar", "Docker", "JSON persistence"]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "education",
+  "degree": "B.Sc. in Computer Science and Engineering",
+  "institution": "Chittagong University of Engineering and Technology",
+  "shortName": "CUET",
+  "location": "Chattogram, Bangladesh",
+  "period": "February 2020 — August 2025",
+  "cgpa": "3.70 / 4.00",
+  "scholarshipCount": 8,
+  "scholarships": "Eight consecutive semester scholarships for academic excellence",
+  "scholarshipSource": "Provided by Mostak Mahmud Chowdhury",
+  "teaching": ["Programming & object-oriented programming", "Data structures & algorithms", "Database systems", "Software engineering", "Web engineering", "Machine learning & artificial intelligence", "Computer vision", "Capstone & project supervision"],
+  "teachingStatement": "I aim to help students connect CSE fundamentals with research and modern engineering practice—from algorithmic reasoning to building, evaluating, and maintaining real systems."
+}

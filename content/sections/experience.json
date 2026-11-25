@@ -1,0 +1,34 @@
+{
+  "id": "experience",
+  "positions": [
+    {
+      "company": "Samsung R&D Institute Bangladesh",
+      "role": "Software Engineer",
+      "period": "March 2026 — Present",
+      "location": "Dhaka, Bangladesh",
+      "summary": "Building production systems where cloud software, connected devices, and applied AI meet.",
+      "highlights": [
+        "Contribute to SmartThings Pro Web Lounge, a cloud-native hospitality-IoT platform for authorized creation, provisioning, and governance of smart-device experiences.",
+        "Translate requirements into maintainable backend, frontend, data, and API designs. Build role-aware workflows, QR-based access governance, PMS-facing lifecycle APIs, and paginated data access.",
+        "Improve performance and cluster-safe scheduled processing, applying practical judgment to security, scalability, and concurrency.",
+        "Built an AI-assisted, prompt-guided video-production proof of concept, recognized as the Application Team’s Best Engineering Product and selected among Samsung R&D Bangladesh’s top products.",
+        "Contributed to confidential thermal-management research for mobile video recording, balancing device temperature, compute workload, and perceptible video quality."
+      ],
+      "technologies": ["Java", "Spring Boot", "Vue.js", "TypeScript", "PostgreSQL", "Docker", "Kubernetes", "Azure", "Observability"]
+    },
+    {
+      "company": "Tirzok Limited",
+      "role": "Junior Software Engineer",
+      "period": "February — March 2026",
+      "location": "Dhaka, Bangladesh",
+      "summary": "Business software with a focus on reliable workflows.",
+      "highlights": ["Contributed to Odoo-based ERP development in Python, including automated invoice-reporting workflows, clean-code practices, Git-based collaboration, and code review."],
+      "technologies": ["Python", "Odoo", "Git"]
+    }
+  ],
+  "inventions": [
+    { "title": "Adaptive Thermal Management for Video Recording", "description": "Contributed to an invention addressing device temperature and recording workload while preserving video quality." },
+    { "title": "Intrusion Detection and Photo Reconstruction", "description": "Contributed to an invention involving intrusion detection and photo reconstruction." }
+  ],
+  "inventionNote": "Technical details are confidential under NDA. Grant or filing status is not specified in the CV."
+}

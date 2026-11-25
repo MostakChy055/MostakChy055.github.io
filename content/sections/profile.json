@@ -1,0 +1,17 @@
+{
+  "id": "profile",
+  "name": "Mostak Mahmud Chowdhury",
+  "role": "Software Engineer · AI Researcher",
+  "location": "Dhaka, Bangladesh",
+  "email": "mostakmahmud.055@gmail.com",
+  "phone": "+8801821296689",
+  "intro": "I study how machines understand language, images, and the connections between them. At Samsung R&D Institute Bangladesh, I bring that curiosity to production software and applied AI.",
+  "bio": "A Computer Science and Engineering graduate from CUET, I work across natural language processing, multimodal learning, and video understanding. My research spans four peer-reviewed publications and a thesis on temporally consistent video colorization. I am interested in academic teaching and research that connects rigorous foundations with practical engineering.",
+  "links": {
+    "github": "https://github.com/MostakChy055",
+    "linkedin": "https://www.linkedin.com/in/mostak-mahmud-chowdhury-a2947b214",
+    "anthology": "https://aclanthology.org/people/mostak-mahmud-chowdhury/unverified/",
+    "newsletter": "https://www.linkedin.com/newsletters/gradientdescent-7418676299516411904/"
+  },
+  "researchInterests": ["Natural language processing", "Multimodal learning", "Computer vision", "Generative AI", "Video understanding & colorization", "Reliable & efficient AI"]
+}

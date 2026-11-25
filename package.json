@@ -1,0 +1,12 @@
+{
+  "name": "mostak-academic-portfolio",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "preview": "node scripts/preview.mjs",
+    "content": "node scripts/content.mjs"
+  }
+}

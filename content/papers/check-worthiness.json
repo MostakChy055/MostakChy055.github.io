@@ -1,0 +1,28 @@
+{
+  "id": "check-worthiness",
+  "kind": "paper",
+  "title": "Fired_from_NLP at CheckThat! 2024: Estimating the Check-Worthiness of Tweets Using a Fine-tuned Transformer-based Approach",
+  "shortTitle": "Which claims deserve a closer look?",
+  "year": 2024,
+  "venue": "CLEF CheckThat! · CEUR Workshop Proceedings",
+  "authors": ["Md. Sajid Alam Chowdhury", "Anik Mahmud Shanto", "Mostak Mahmud Chowdhury", "Hasan Murad", "Udoy Das"],
+  "contribution": "Equal contribution among the first three authors, as marked in the paper.",
+  "tags": ["NLP", "Multilingual learning", "Responsible AI"],
+  "summary": "A multilingual transformer approach to prioritizing claims for fact-checking across Arabic, Dutch, and English.",
+  "sourceUrl": "https://ceur-ws.org/Vol-3740/paper-34.pdf",
+  "pdfUrl": "https://ceur-ws.org/Vol-3740/paper-34.pdf",
+  "codeUrl": "https://github.com/Fired-from-NLP/CLEF-2024-check-worthiness-estimation",
+  "sourceNote": "Tables 3–4 and the detailed analysis associate Dutch with 0.543 and English with 0.745. The abstract reverses those language assignments; the CV follows the abstract. This post follows the detailed tables. F1 averaging is labeled inconsistently, so values are presented simply as reported F1.",
+  "metrics": [{ "label": "Arabic · reported F1", "value": "0.530" }, { "label": "Dutch · reported F1", "value": "0.543" }, { "label": "English · reported F1", "value": "0.745" }],
+  "pipeline": ["Claim text", "mBERT tokenizer", "CW-BERT", "Check-worthy / other"],
+  "sections": [
+    { "id": "concept", "title": "Start with the idea", "paragraphs": ["Check-worthiness is a prioritization problem. A statement can be worth investigating without being false; an ordinary opinion may not need factual verification at all. The useful output is a queue for human attention, not an automatic verdict on truth."] },
+    { "id": "question", "title": "The research question", "paragraphs": ["The study evaluates binary check-worthiness classification for Arabic, Dutch, and English tweets and transcriptions, comparing conventional, recurrent, and transformer models."] },
+    { "id": "method", "title": "Approach & techniques", "paragraphs": ["CW-BERT fine-tunes bert-base-multilingual-uncased for sequence classification. Preprocessing retains numbers, uses 128-token sequences, and maps labels to binary targets. Training uses AdamW, warm-up scheduling, and gradient clipping. Baselines include TF-IDF classifiers, LSTM/BiLSTM, and language-specific transformers."] },
+    { "id": "findings", "title": "Findings & evidence", "paragraphs": ["The detailed results report F1 of 0.530 for Arabic, 0.543 for Dutch, and 0.745 for English; leaderboard positions are 7th, 12th, and 10th respectively. The first three authors contributed equally. See the evidence note for the abstract/table discrepancy."] },
+    { "id": "limitations", "title": "What remains difficult", "paragraphs": ["The paper identifies class imbalance and limited Dutch training data as challenges. A missed high-impact claim and an unnecessary review have different practical costs.", "Discussion: before deploying a prioritization system, choose thresholds using the actual review budget. Audit performance across topics and time periods; a single aggregate score cannot tell an editor how many important claims the queue will miss."] },
+    { "id": "discussion", "title": "Research directions & discussion", "paragraphs": ["A proposed extension is to retrieve context for uncertain claims while keeping prioritization separate from evidence-based verification. M3-Embedding offers multilingual dense, sparse, and multi-vector retrieval as a relevant building block—not a tested component of CW-BERT.", "Compare a text-only baseline with retrieval under a fixed budget. Check whether the extra context changes decisions correctly, and measure how often retrieval simply reinforces misleading wording."], "links": [{ "label": "Related reading: M3-Embedding", "url": "https://arxiv.org/abs/2402.03216" }] }
+  ],
+  "discussionPrompts": ["What is the right balance between missed claims and an overloaded review queue?", "Would retrieval help prioritize a claim, or should it only enter the verification stage?", "How would you test robustness to a new event or topic?"],
+  "citation": "Md. Sajid Alam Chowdhury, Anik Mahmud Shanto, Mostak Mahmud Chowdhury, Hasan Murad, and Udoy Das. 2024. Fired_from_NLP at CheckThat! 2024: Estimating the Check-Worthiness of Tweets Using a Fine-tuned Transformer-based Approach. Working Notes of CLEF 2024, CEUR Workshop Proceedings, vol. 3740, pp. 387–395."
+}

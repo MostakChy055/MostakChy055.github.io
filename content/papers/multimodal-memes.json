@@ -1,0 +1,27 @@
+{
+  "id": "multimodal-memes",
+  "kind": "paper",
+  "title": "Fired_from_NLP@DravidianLangTech 2025: A Multimodal Approach for Detecting Misogynistic Content in Tamil and Malayalam Memes",
+  "shortTitle": "When meaning lives between image and text.",
+  "year": 2025,
+  "venue": "DravidianLangTech 2025 · NAACL · ACL",
+  "authors": ["Md. Sajid Alam Chowdhury", "Mostak Mahmud Chowdhury", "Anik Mahmud Shanto", "Jidan Al Abrar", "Hasan Murad"],
+  "tags": ["Multimodal", "NLP", "Responsible AI"],
+  "summary": "Combining language and visual context to detect misogynistic Tamil and Malayalam memes.",
+  "sourceUrl": "https://aclanthology.org/2025.dravidianlangtech-1.81/",
+  "pdfUrl": "https://aclanthology.org/2025.dravidianlangtech-1.81.pdf",
+  "codeUrl": "https://github.com/Sajid064/Misogyny-Meme-Detection",
+  "sourceNote": "The ACL landing page and CV list pages 459–464; the supplied PDF is numbered 537–542. The citation uses the stable DOI and omits the conflicting page range. Scores below retain the paper’s reported micro-F1 label.",
+  "metrics": [{ "label": "Tamil · reported micro-F1", "value": "0.678" }, { "label": "Malayalam · reported micro-F1", "value": "0.803" }],
+  "pipeline": ["Text + image", "BERT + CNN", "Attention + fusion", "Binary classification"],
+  "sections": [
+    { "id": "concept", "title": "Start with the idea", "paragraphs": ["Multimodal learning combines different kinds of information, such as language and images. A caption can appear harmless in isolation while its accompanying image changes the implication. Understanding the combination requires more than two independent predictions."] },
+    { "id": "question", "title": "The research question", "paragraphs": ["The study examines misogyny classification in Tamil and Malayalam memes using MDMD image–transcription pairs."] },
+    { "id": "method", "title": "Approach & techniques", "paragraphs": ["BERT variants encode text; ResNet50, MobileNetV2, and EfficientNetB7 encode images. Cross-modal attention connects the features. Hadamard products model elementwise interaction, while concatenation preserves modality-specific information before dense classification layers."] },
+    { "id": "findings", "title": "Findings & evidence", "paragraphs": ["Language-specific BERT with EfficientNetB7 gives the best reported micro-F1: 0.678 for Tamil and 0.803 for Malayalam. Corresponding mBERT pairings score 0.644 and 0.742. These comparisons concern this dataset and experimental setup."] },
+    { "id": "limitations", "title": "What remains difficult", "paragraphs": ["The paper discusses limited data, class imbalance, code-mixed text, distracting image elements, cultural nuance, and implicit or sarcastic meanings.", "Discussion: a useful follow-up would test text-only, image-only, concatenation-only, and attention-based systems on identical splits. Without these controls, a stronger backbone does not establish which fusion component caused the improvement. Check minority-class recall alongside the aggregate metric."] },
+    { "id": "discussion", "title": "Research directions & discussion", "paragraphs": ["SigLIP 2 introduces multilingual vision–language encoders with improved cross-modal representations. This is a relevant later model family to evaluate, not a component of the published study.", "A proposed extension would compare joint pretrained representations with separate encoders, then test code-switching, unseen meme templates, and captions paired with misleading images. Keep cultural interpretation and human review central: an apparently confident classifier can still misunderstand satire or context."], "links": [{ "label": "Related reading: SigLIP 2 (2025)", "url": "https://arxiv.org/abs/2502.14786" }] }
+  ],
+  "discussionPrompts": ["Which ablation would tell us whether the model actually uses both modalities?", "How should evaluation separate unfamiliar meme templates from unfamiliar language?", "Can modern vision–language encoders help without losing local cultural context?"],
+  "citation": "Md. Sajid Alam Chowdhury, Mostak Mahmud Chowdhury, Anik Mahmud Shanto, Jidan Al Abrar, and Hasan Murad. 2025. Fired_from_NLP@DravidianLangTech 2025: A Multimodal Approach for Detecting Misogynistic Content in Tamil and Malayalam Memes. Proceedings of the Fifth Workshop on Speech, Vision, and Language Technologies for Dravidian Languages. Association for Computational Linguistics. doi:10.18653/v1/2025.dravidianlangtech-1.81."
+}

@@ -1,0 +1,15 @@
+{
+  "id": "recognition",
+  "programming": { "codeforces": "Expert · max 1628", "codechef": "3-star · max 1790", "problems": "2,500+", "contests": "100+" },
+  "awards": [
+    { "result": "15th / 130 teams", "event": "AUST Inter-University Programming Contest", "year": "2025" },
+    { "result": "5th / 53 teams", "event": "CUET Intra-University Programming Contest", "year": "2023" },
+    { "result": "11th / 13,850", "event": "CodeChef Starters 90 · Division 4", "year": "2023" },
+    { "result": "7th place", "event": "AraFinNLP · Multi-dialect Intent Detection", "year": "2024" },
+    { "result": "7th place · Arabic", "event": "CLEF CheckThat! · Check-Worthiness Estimation", "year": "2024" }
+  ],
+  "references": [
+    { "name": "Dr. Mohammad Shamsul Arefin", "role": "Former Dean, Faculty of ECE, CUET; President, Bangladesh Computer Society", "affiliation": "Chittagong University of Engineering & Technology" },
+    { "name": "Saif Khan Shahrin", "role": "Product Lead", "affiliation": "Samsung R&D Institute Bangladesh" }
+  ]
+}
